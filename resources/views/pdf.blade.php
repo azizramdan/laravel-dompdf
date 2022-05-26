@@ -7,10 +7,10 @@
     <title>Document</title>
 </head>
 <body>
-    @for ($i = 0; $i <= $loop; $i++)
-    @foreach ($data as $item)
-    <p>{{ $item }}</p>
-    @endforeach
+    @for ($i = 0; $i < $loop; $i++)
+    @for ($j = 0; $j < count($data); $j++)
+        <p>{{ $data[$j] }}
+    @endfor
     @endfor
 </body>
 </html>
